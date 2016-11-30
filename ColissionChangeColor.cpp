@@ -24,6 +24,12 @@ int main()
 {
 	int widthWindow = 500;
 	int heightWindow = 500;
+<<<<<<< HEAD
+=======
+	int colorRedR = 255;
+	int colorRedV = 0;
+	int colorRedB = 0;
+>>>>>>> f3da85220086665d93e2e34b24a6dbf30925517c
 	double widthRect = 100.0;
 	double heightRect = 100.0;
 	double rCircle = 50.0;
@@ -34,6 +40,7 @@ int main()
 	float speed = 0.25;
 
 	/*Setting the window*/
+<<<<<<< HEAD
 	sf::RenderWindow window(sf::VideoMode(widthWindow, heightWindow),
 		"Hunter Square !");
 
@@ -44,6 +51,17 @@ int main()
 	/*Setting the circle*/
 	Circle* circlePhysiqueShape = new
 		Circle(rCircle, xDefault, yDefault);
+=======
+	sf::RenderWindow window(sf::VideoMode(widthWindow, heightWindow), "Hunter Square !");
+
+	/*Setting the square*/
+	Rectangle* rectPhysiqueShape = new 
+		Rectangle(widthRect,heightRect,xRect,yRect);
+
+	/*Setting the circle*/
+	Circle* circlePhysiqueShape = new
+		Circle(rCircle, xDefault,yDefault);
+>>>>>>> f3da85220086665d93e2e34b24a6dbf30925517c
 
 	while (window.isOpen()) //GameLoop
 	{
@@ -79,6 +97,7 @@ int main()
 		{
 			circlePhysiqueShape->move(deltaX, deltaY);
 		}
+<<<<<<< HEAD
 
 		
 		if (circlePhysiqueShape->isColliding(rectPhysiqueShape))
@@ -90,12 +109,28 @@ int main()
 		{
 			circlePhysiqueShape->Sprite.setFillColor(sf::Color::Green);
 			rectPhysiqueShape->Sprite.setFillColor(sf::Color::Blue);
+=======
+		
+		
+		if (circlePhysiqueShape->isColliding(rectPhysiqueShape))
+		{
+		
+		}
+		else
+		{
+
+>>>>>>> f3da85220086665d93e2e34b24a6dbf30925517c
 		}
 
 		//Setting/Clearing the screen
 		window.clear();
+<<<<<<< HEAD
 		window.draw(circlePhysiqueShape->Sprite);
 		window.draw(rectPhysiqueShape->Sprite);
+=======
+		circlePhysiqueShape->draw(&window);
+		rectPhysiqueShape->draw(&window);
+>>>>>>> f3da85220086665d93e2e34b24a6dbf30925517c
 		window.display();
 	}
 
@@ -105,6 +140,10 @@ int main()
 
 	//GameOver
 	system("pause");
+<<<<<<< HEAD
 	return 0;
+=======
+    return 0;
+>>>>>>> f3da85220086665d93e2e34b24a6dbf30925517c
 }
 
